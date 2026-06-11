@@ -36,7 +36,7 @@ function tampilkanPesan() {
     pesanSukses.classList.remove('hidden');
 }
 
-// 3. Logika pas klik Pilihan Jam (Kirim jawaban ke Telegram kamu)
+// 3. Logika pas klik Pilihan Jam (Langsung masuk ke Chat Telegram Kamu)
 function pilihJam(waktu) {
     const tanyaJam = document.querySelector('.tanya-jam');
     const jamContainer = document.querySelector('.jam-container');
@@ -50,15 +50,16 @@ function pilihJam(waktu) {
     jawabanAkhir.innerHTML = waktu;
     jawabanAkhir.classList.remove('hidden');
 
-    // --- FITUR OTOMATIS TELEGRAM ---
-    // GANTI dengan username Telegram kamu (TANPA tanda @)
+    // --- TEMBAK LANGSUNG KE CHAT TELEGRAM ---
+    // PENTING: Ganti dengan username Telegram kamu (TIDAK PAKE @, perhatikan huruf besar/kecilnya harus persis)
     const usernameTele = "dackdickduck"; 
     
-    // Pesan yang otomatis terketik di kolom chat Telegram Carine
+    // Pesan otomatis yang akan dibawa
     const teksChat = encodeURIComponent(`Aku mau mabar Roblox! Opsi yang aku pilih: "${waktu}"`);
     
-    // Kasih jeda 1.2 detik biar dia sempet liat teksnya berubah di web, baru oper ke Tele
+    // Kasih jeda 1.2 detik biar dia sempet liat teksnya berubah di web, baru dioper ke Tele
     setTimeout(() => {
-        window.open(`https://t.me/${usernameTele}?text=${teksChat}`, '_blank');
+        // Format ini lebih ampuh memaksa browser HP membuka chat spesifik username kamu
+        window.location.href = `https://telegram.me/${usernameTele}?text=${teksChat}`;
     }, 1200); 
 }
