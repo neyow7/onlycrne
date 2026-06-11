@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    /* Background gradasi pastel aesthetic */
+    background: linear-gradient(135deg, #FFF0f5 0%, #E6E6FA 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden; /* Mencegah tombol GAK bikin jebol layar saat kabur */
+    padding: 20px;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 40px 25px;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(255, 182, 193, 0.4);
+    text-align: center;
+    max-width: 400px; /* Batas lebar di laptop */
+    width: 100%; /* Otomatis mengecil & pas di layar HP */
+    border: 4px solid #FFF; 
+    transition: all 0.5s ease;
+}
+
+/* Sembunyikan paksa gambar roblox yang rusak/broken dari layar */
+.roblox-img {
+    display: none !important;
+}
+
+/* Menghias tulisan sapaan Carine di paling atas */
+.sapaan {
+    color: #FF8Ea7;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    display: inline-block;
+    background-color: #FFF0f5;
+    padding: 5px 15px;
+    border-radius: 20px;
+}
+
+h1 {
+    color: #FF6B8B; 
+    font-weight: 900;
+    margin-bottom: 10px;
+    font-size: 1.6rem;
+    line-height: 1.3;
+}
+
+.sub-judul {
+    color: #777;
+    margin-bottom: 30px;
+    font-size: 1rem;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+    height: 55px;
+    align-items: center;
+}
+
+button {
+    padding: 12px 28px;
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#btn-mau {
+    background-color: #FF8Ea7; 
+    color: white;
+    box-shadow: 0 5px 15px rgba(255, 142, 167, 0.4);
+}
+
+#btn-mau:hover {
+    transform: scale(1.08);
+    background-color: #FF6B8B;
+}
+
+#btn-males {
+    background-color: #E0E0E0;
+    color: #888;
+    position: absolute;
+    right: 50px;
+}
+
+/* Mengatur transisi muncul satu per satu */
+.hidden {
+    display: none !important;
+}
+
+#pesan-sukses {
+    margin-top: 15px;
+    padding-top: 10px;
+    /* border-top yang dashed kemarin sudah dihapus dari sini */
+    animation: slideUp 0.5s ease-out forwards;
+}
+
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#pesan-sukses h2 {
+    color: #FF6B8B;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.tanya-jam {
+    color: #666;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.jam-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.btn-jam {
+    background-color: #E0F7FA; /* Biru mint pastel */
+    color: #00838F;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 131, 143, 0.1);
+}
+
+.btn-jam:hover {
+    background-color: #B2EBF2;
+    transform: scale(1.03);
+}
+
+#jawaban-akhir {
+    color: #FF6B8B;
+    margin-top: 25px;
+    font-size: 1.2rem;
+    line-height: 1.4;
+    animation: slideUp 0.5s ease-out forwards;
+}
