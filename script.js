@@ -52,7 +52,7 @@ function pilihJam(waktu) {
 
     // --- FITUR OTOMATIS TELEGRAM ---
     // GANTI dengan username Telegram kamu (TANPA tanda @)
-    const usernameTele = ""; 
+    const usernameTele = "dackdicduck"; 
     
     // Pesan yang otomatis terketik di kolom chat Telegram Carine
     const teksChat = encodeURIComponent(`Aku mau mabar Roblox! Opsi yang aku pilih: "${waktu}"`);
